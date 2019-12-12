@@ -44,10 +44,8 @@ public class HomeFragment extends Fragment {
         }else {
 
             AdapterActivity adapter2 = new AdapterActivity(DashboardActivity.st, getContext());
-
             RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(this.getContext());
             recyclerView.setLayoutManager(layoutManager2);
-
             recyclerView.setAdapter(adapter2);
         }
         return root;

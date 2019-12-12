@@ -15,7 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-
 import com.trilochan.assignthree_ecommerce.DashboardActivity;
 import com.trilochan.assignthree_ecommerce.R;
 import com.trilochan.assignthree_ecommerce.model.Student;
@@ -57,7 +56,6 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
         });
         return root;
     }
-
     @Override
     public void onClick(View view) {
 
