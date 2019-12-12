@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             password=editTextPassword.getText().toString();
             if(checkvalidate()) {
 
-                if(username.equals("Admin") && password.equals("Admin")) {
+                if(username.equals("Admin") && password.equals("password")) {
                     Intent intent = new Intent(this, DashboardActivity.class);
                     startActivity(intent);
                 }

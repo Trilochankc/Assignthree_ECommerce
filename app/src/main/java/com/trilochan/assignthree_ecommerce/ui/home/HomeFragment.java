@@ -14,7 +14,6 @@ import com.trilochan.assignthree_ecommerce.AdapterActivity;
 import com.trilochan.assignthree_ecommerce.DashboardActivity;
 import com.trilochan.assignthree_ecommerce.R;
 import com.trilochan.assignthree_ecommerce.model.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +34,7 @@ public class HomeFragment extends Fragment {
         if(DashboardActivity.st.isEmpty()) {
             DashboardActivity.st.add(new Student("Trilochan kc", "Male", "21", "Gamcha"));
             DashboardActivity.st.add(new Student("Hello world", "Male", "20", "ktm"));
+            DashboardActivity.st.add(new Student("last test", "others", "18", "lalitpur"));
 
             AdapterActivity adapter = new AdapterActivity(DashboardActivity.st, getContext());
 

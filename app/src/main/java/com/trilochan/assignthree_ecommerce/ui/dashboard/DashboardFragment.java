@@ -71,41 +71,37 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
             if(validate())
             {
                 DashboardActivity.st.add(new Student(fullname,gender,age,address));
-                Toast.makeText(getContext(),"Student added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Added student successfully", Toast.LENGTH_SHORT).show();
 
 
             }
-
-
-
         }
-
     }
 
     private boolean validate(){
         if(TextUtils.isEmpty(fullname))
         {
-            editTextFullName.setError("Please enter a name");
+            editTextFullName.setError("enter a name");
             editTextFullName.requestFocus();
             return false;
         }
         if(TextUtils.isEmpty(age))
         {
-            editTextAge.setError("Please enter age");
+            editTextAge.setError("enter age");
             editTextAge.requestFocus();
             return false;
         }
 
         if(!TextUtils.isDigitsOnly(age))
         {
-            editTextAge.setError("Please enter age");
+            editTextAge.setError("enter an age");
             editTextAge.requestFocus();
             return false;
         }
 
         if(TextUtils.isEmpty(address))
         {
-            editTextAddress.setError("Please enter an address");
+            editTextAddress.setError("enter an address");
             editTextAddress.requestFocus();
             return false;
         }
