@@ -40,13 +40,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             password=editTextPassword.getText().toString();
             if(checkvalidate()) {
 
-                if(username.equals("softwarica") && password.equals("coventry")) {
+                if(username.equals("Admin") && password.equals("Admin")) {
                     Intent intent = new Intent(this, DashboardActivity.class);
                     startActivity(intent);
                 }
                 else
                 {
-                    Toast.makeText(this, "Either username or Password is incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Username or email might be incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -56,13 +56,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private boolean checkvalidate(){
         if(TextUtils.isEmpty(username))
         {
-            editTextUserName.setError("Please enter a username");
+            editTextUserName.setError("enter a username");
             editTextUserName.requestFocus();
             return false;
         }
         if(TextUtils.isEmpty(password))
         {
-            editTextPassword.setError("Please enter password");
+            editTextPassword.setError("enter password");
             editTextPassword.requestFocus();
             return false;
         }
