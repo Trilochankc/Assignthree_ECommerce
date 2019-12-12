@@ -53,7 +53,6 @@ public class HomeFragment extends Fragment {
 
             recyclerView.setAdapter(adapter2);
         }
-
         return root;
     }
 }

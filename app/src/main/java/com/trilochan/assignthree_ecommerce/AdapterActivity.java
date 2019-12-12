@@ -7,13 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-
 import com.trilochan.assignthree_ecommerce.model.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,19 +35,18 @@ public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.MyHold
     public void onBindViewHolder(@NonNull MyHolder holder, final int position) {
 
         final  Student stu = stut_list.get(position);
-
         holder.fullname.setText(stu.getFullname());
         holder.age.setText(stu.getAge());
         holder.address.setText(stu.getAddress());
         holder.gender.setText(stu.getGender());
-//        holder.delete.setImageResource(R.drawable.ic_delete);
+
         holder.imageview.setImageDrawable(contexts.getResources().getDrawable(R.drawable.ic_delete));
 
         String gen= stu.getGender();
 
         if(gen=="Male"){
             holder.imageview.setImageResource(R.drawable.man);
-//            holder.imageview.setImageDrawable(context.getResources().getDrawable(R.drawable.man));
+
 
         }
         else if(gen=="Female"){
@@ -60,7 +55,6 @@ public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.MyHold
         }
         else{
             holder.imageview.setImageDrawable(contexts.getResources().getDrawable(R.drawable.women));
-
 
         }
 
@@ -78,18 +72,17 @@ public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.MyHold
 
                 Student studen=stut_list.get(position);
 
-                // Remove the item on remove/button click
+                //button click - remove the data
                 stut_list.remove(position);
 
                 notifyItemRemoved(position);
 
                 notifyItemRangeChanged(position,stut_list.size());
 
-                // Show the removed item label
-                Toast.makeText(contexts,"Removed : " + studen.getFullname(),Toast.LENGTH_SHORT).show();
+                //its shows the removed items
+                Toast.makeText(contexts,"It has been removed : " + studen.getFullname(),Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override
@@ -101,6 +94,7 @@ public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.MyHold
 
         ImageView imageview,delete;
         TextView fullname,age,address,gender;
+
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             imageview= itemView.findViewById(R.id.stimage);

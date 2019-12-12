@@ -64,7 +64,7 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
         if(view.getId()==R.id.btn_save)
         {
 
-            Toast.makeText(getActivity(), "We have clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "The Information has been added", Toast.LENGTH_SHORT).show();
             fullname = editTextFullName.getText().toString();
             age=editTextAge.getText().toString();
             address=editTextAddress.getText().toString();
